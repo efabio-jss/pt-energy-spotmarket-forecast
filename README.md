@@ -55,8 +55,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 ### Run the pipeline
+
   A) Download + build datasets
     python omie.py
+    
   B) Train models + generate outputs
     python omie_ds.py
 
