@@ -42,11 +42,6 @@ Streamlit dashboard with 3 pages:
 
 ---
 
-## yaml
-> **Note:** The `raw/` and `processed/` folders should NOT be committed to GitHub (large + frequently changing). See `.gitignore` below.
-
----
-
 ## Setup (local)
 
 ### 1) Create environment
@@ -69,68 +64,8 @@ pip install -r requirements.txt
   streamlit run app.py
 
 
-Configuration
 
-The scripts use local paths (Windows) that you can adjust:
-
-  omie.py → BASE_DIR = Path(r"...\Omie")
-  omie_ds.py → BASE_DIR = Path(r"...\Omie\processed")
-  app.py → the dashboard asks for the outputs/ folder path in the sidebar (default is set).
-
-
-Deploy (Free + Public)
-Option A) Streamlit Community Cloud (recommended)
-
-Push this repo to GitHub (public).
-
-Go to Streamlit Community Cloud and create a new app:
-
-Main file: app.py
-
-Branch: main
-
-In Streamlit Cloud “Advanced settings”, set Python version if needed.
-
-For public/free deploy, yes — GitHub is the normal path.
-
-Important: since OMIE data is generated locally, you have 2 common options:
-
-(Best) Keep the pipeline local and commit only the code. The deployed app expects data to be present (not ideal for cloud).
-
-(Better for cloud) Add a small “data refresh step” in the app or GitHub Actions to fetch/update data periodically (requires extra work).
-
-(Simplest) Commit a small sample dataset to processed/outputs/ just for demo (e.g., last 30–90 days), and keep full datasets ignored.
-
-
-.gitignore
-
-# Python
-__pycache__/
-*.pyc
-.venv/
-.env
-
-# Data (generated)
-raw/
-processed/
-**/outputs/
-
-# OS
-.DS_Store
-Thumbs.db
-
-
-Disclaimer
-
-This project is for analytics and decision support. OMIE data terms apply.
-No guarantee of forecasting accuracy (spot markets are volatile).
-
-Author:
-
-Fabio Silva — Data & BI / Data Science
-
-
-## 3) requirements.txt
+## Requirements
 
 pandas>=2.0
 numpy>=1.24
@@ -145,6 +80,17 @@ xgboost>=2.0
 
 prophet>=1.1
 cmdstanpy>=1.2
+
+
+## Disclaimer
+
+This project is for analytics and decision support. OMIE data terms apply.
+No guarantee of forecasting accuracy (spot markets are volatile).
+
+## Author:
+
+Fabio Silva — Data & BI / Data Science
+
 
 
 
