@@ -1,4 +1,4 @@
-# ⚡ PT Energy Spot Market Forecast — Executive Energy Dashboard (Apple Night)
+# ⚡ PT Energy Spot Market Forecast — Executive Energy Dashboard
 
 An end-to-end pipeline that downloads OMIE PT spot market data, engineers datasets, trains forecasting & risk models, and serves an executive-grade Streamlit dashboard.
 
